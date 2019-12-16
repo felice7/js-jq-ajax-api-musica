@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        
+        
+        <header>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                    <img src="https://images.pyramidshop.com/images/_popup/ACPPR48056.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41JD3CW65HL.jpg" alt="">
+                    <img src="https://cdn2.jazztimes.com/2018/05/SteveGadd-800x723.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/810nSIQOLiL._SY355_.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Eric_Clapton_OMCOMR.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51rggtPgmRL.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81r3FVfNG3L._SY355_.jpg" alt="">
+                    <img src="https://img.discogs.com/KOBsqQwKiNKH-q927oHMyVdDzSo=/fit-in/596x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6406665-1418464475-6120.jpeg.jpg" alt="">
+                    <img src="https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                    <img src="https://images.pyramidshop.com/images/_popup/ACPPR48056.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41JD3CW65HL.jpg" alt="">
+                    <img src="https://cdn2.jazztimes.com/2018/05/SteveGadd-800x723.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/810nSIQOLiL._SY355_.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Eric_Clapton_OMCOMR.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51rggtPgmRL.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81r3FVfNG3L._SY355_.jpg" alt="">
+                    <img src="https://img.discogs.com/KOBsqQwKiNKH-q927oHMyVdDzSo=/fit-in/596x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6406665-1418464475-6120.jpeg.jpg" alt="">
+                    <img src="https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg" alt="">
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            
+            <div class="box">    
+                <select id="scelta-genere">
+                    <option value="">Scegli un genere</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </div>
+            
+            <div id="dischi" class="flex-container"></div>
+            
+        </main>
+        
+        <script id="disco-template" type="text/x-handlebars-template">
+            <div class="card-disco" data-genere="{{ genere }}">
+                <img class="copertina" src="{{ copertina }}" alt="{{ titolo }} di {{ artista }}">
+                <p class="titolo">{{ titolo }}</p>
+                <small class="artista">{{ artista }}</small>
+                <small class="anno">{{ anno }}</small>
+            </div>
+        </script>
+        
+        
+        
+        
+    <script src="script.js" charset="utf-8"></script>    
+    </body>
+</html>
